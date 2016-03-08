@@ -12,7 +12,8 @@
       }
   }
   function marker( x, y ){
-    this.css = "{'top':'" + y + "px', " + "'left':'" + x + "px'}"
+    this.top = y
+    this.left = x
   }
 
 }())

@@ -1,13 +1,14 @@
-
-
 .main-map{
   height: 100%;
   width: 100%;
 }
 
 .map-marker{
+  height: 50px;
+  width: 40px;
+
   position: absolute;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-100%);
   color:red;
   font-size: 80px;
 }
