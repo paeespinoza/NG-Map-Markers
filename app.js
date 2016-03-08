@@ -3,25 +3,16 @@
           .controller( 'mapController',mapController )
 
   function mapController(){
+      this.markers = []
       this.mapMarker = function(){
-        var markerX = event.clientX
-        var markerY = event.clientY
-
-        var newMarker = document.createElement("DIV")
-        var markerText = document.createTextNode('X')
-        newMarker.appendChild(markerText)
-        angular.element(newMarker).addClass('map-marker')
-        angular.element(newMarker).css("top",markerY+"px")
-        angular.element(newMarker).css("left",markerX+"px")
-        angular.element(newMarker).on('click', removeMarker)
-        document.body.appendChild(newMarker)
-
-        function removeMarker(){
-          angular.element(event.target).remove()
-        }
-
+        this.markers.push( new marker(event.pageX, event.pageY) )
       }
-
+      this.mapMarkerRemove = function(marker){
+        this.markers.splice(this.markers.indexOf(marker),1)
+      }
+  }
+  function marker( x, y ){
+    this.css = "{'top':'" + y + "px', " + "'left':'" + x + "px'}"
   }
 
 }())

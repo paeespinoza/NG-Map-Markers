@@ -6,6 +6,10 @@
    </head>
    <body ng-controller="mapController as mapCtrl">
      <img ng-click="mapCtrl.mapMarker()" class="main-map" src="map.jpeg">
+
+     <!--  The map marker div - hidden by default? -->
+     <div class="map-marker" ng-repeat="marker in mapCtrl.markers" ng-style={{marker.css}} ng-click="mapCtrl.mapMarkerRemove(marker)">X</div>
+
      <script src="app.js"></script>
   </body>
 </html>
