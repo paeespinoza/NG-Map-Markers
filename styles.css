@@ -1,14 +1,55 @@
+*{
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+
+.map-wrapper{
+  position: relative;
+}
+
 .main-map{
   height: 100%;
   width: 100%;
 }
-
+.note-prompt{
+  position: fixed;
+  height: 100px;
+  width: 200px;
+  background-color: #34495e;
+  border-radius: 20px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.note-prompt input{
+  background-color: inherit;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 20%;
+  width: 100%;
+}
+.note-prompt input:focus{
+  background-color: #7f8c8d;
+}
 .map-marker{
   height: 50px;
   width: 40px;
 
   position: absolute;
   transform: translateX(-50%) translateY(-100%);
-  color:red;
-  font-size: 80px;
+}
+.marker-note{
+  background-color: #34495e;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 150px;
+  padding: 8px;
+  text-align: center;
+
+  position: absolute;
 }
