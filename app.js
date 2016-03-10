@@ -32,9 +32,14 @@
         mc.markers.splice(mc.markers.indexOf(marker),1)
       }
 
+      // *********************************************************************
+      // Marker Constructor - primary object pushed onto the state array:
+      // mc.markers[] -- exposes all of the methods needed for individual
+      // marker manipulation
+      // *********************************************************************
       function Marker( x, y ){
-        this.top = y / (document.querySelector('.map-wrapper').clientHeight) *100
-        this.left = x / (document.querySelector('.map-wrapper').clientWidth) *100
+        this.top = y
+        this.left = x
         this.note = ''
         this.css = function(){
           return "{'top': '" + this.top + "%','left': '" + this.left + "%'}"
