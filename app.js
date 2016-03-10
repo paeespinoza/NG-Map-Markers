@@ -5,16 +5,27 @@
   function mapController($timeout){
       this.markers = []
       // this.showNoteInput = false
-
+      var map
+      
+      function initMap(){
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat:36.889413, lng:-76.055226},
+          zoom: 13
+        });
+      }
 
       this.mapMarker = function(){
-        var newMarker = new Marker(event.pageX, event.pageY)
-        this.markers.push( newMarker )
+        // var newMarker = new Marker(event.pageX, event.pageY)
+        // this.markers.push( newMarker )
+          console.log('debugging google api')
+
+        // ***** Working on Responsiveness - not crucial ***************
         // $timeout( focusPrompt, 000)
         //
         // function focusPrompt (){
         //   document.querySelector('.note-prompt').focus()
         // }
+        // *************************************************************
       }
 
       this.mapMarkerRemove = function(marker){
