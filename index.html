@@ -2,6 +2,8 @@
 <html ng-app="mapApp">
    <head>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI-QL5dp2newcb1cE1TfFzYUijVOaV26E"></script>
+
      <link rel="stylesheet" type="text/css" href="styles.css">
    </head>
    <body ng-controller="mapController as mapCtrl">
@@ -11,7 +13,7 @@
      </div>
 
              <!--  The map marker div - hidden by default? -->
-               <div  class="map-wrapper" ng-click="mapCtrl.mapMarker()">
+               <!-- <div  class="map-wrapper" ng-click="mapCtrl.mapMarker()">
                  <div ng-repeat="marker in mapCtrl.markers" >
                    <img src="green-marker.png" class="map-marker" ng-style={{marker.css()}} ng-click="mapCtrl.mapMarkerRemove(marker)" ng-mouseover="marker.showNote()" ng-mouseleave="marker.hideNote()">
                    <div class="marker-note" ng-show="marker.noteVisible" ng-style={{marker.css()}}>{{marker.note}}</div>
@@ -20,10 +22,9 @@
                      <button class="note-prompt-confirm" ng-click= "marker.confirmNote()" >Confirm</button>
                    </div>
                  </div>
-               </div>
+               </div> -->
 
-     <script src="googleMap.js"></script>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI-QL5dp2newcb1cE1TfFzYUijVOaV26E&callback=initMap" async defer></script>
-     <script src="app.js"></script>
+    <script src="googleMap.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
