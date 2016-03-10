@@ -4,7 +4,7 @@
 
   function mapController(){
       var mc = this
-      mc.markers = []
+      // mc.markers = []
       mc.map = new google.maps.Map(document.getElementById('map'),
       {
           center: {lat:36.889413, lng:-76.055226},
