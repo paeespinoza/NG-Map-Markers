@@ -3,10 +3,10 @@
           .controller( 'mapController', ['$timeout', mapController] )
 
   function mapController($timeout){
-      this.markers = []
-      // this.showNoteInput = false
+      var mc = this
+      mc.markers = []
       var map
-      
+
       function initMap(){
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat:36.889413, lng:-76.055226},
@@ -14,9 +14,9 @@
         });
       }
 
-      this.mapMarker = function(){
+      mc.mapMarker = function(){
         // var newMarker = new Marker(event.pageX, event.pageY)
-        // this.markers.push( newMarker )
+        // mc.markers.push( newMarker )
           console.log('debugging google api')
 
         // ***** Working on Responsiveness - not crucial ***************
@@ -28,8 +28,8 @@
         // *************************************************************
       }
 
-      this.mapMarkerRemove = function(marker){
-        this.markers.splice(this.markers.indexOf(marker),1)
+      mc.mapMarkerRemove = function(marker){
+        mc.markers.splice(mc.markers.indexOf(marker),1)
       }
 
       function Marker( x, y ){
