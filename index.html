@@ -13,7 +13,7 @@
              <div class="marker-note" ng-show="marker.noteVisible" ng-style={{marker.css()}}>{{marker.note}}</div>
              <div class="note-prompt-wrapper" ng-show="marker.promptVisible" ng-style={{marker.css()}}>
                <input class="note-prompt" ng-model="marker.note" placeholder="Enter Marker Note ...">
-               <button class="note-prompt-confirm">Confirm</button>
+               <button class="note-prompt-confirm" ng-click= "marker.confirmNote()" >Confirm</button>
              </div>
            </div>
      </div>

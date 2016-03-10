@@ -6,6 +6,7 @@
 input,
 button{
   outline: none;
+  font-size: 1rem;
 }
 html{
   font-size: 14px;
@@ -25,6 +26,7 @@ html{
 
   background-color: #34495e;
   border-radius: 10px;
+  color: #fff;
   padding: 10px;
 
   text-align: center;
@@ -53,6 +55,7 @@ html{
   background-color: #34495e;
   color: #fff;
   border-radius: 10px;
+  font-size: 1rem;
   max-width: 150px;
   padding: 8px;
   text-align: center;
